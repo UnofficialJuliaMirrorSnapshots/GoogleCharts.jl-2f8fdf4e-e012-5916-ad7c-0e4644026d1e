@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:{{{:chart_packages}}} });
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        {{#:charts}}
+        var {{:chart_id}}_data = {{{:chart_data}}};
+        var {{:chart_id}}_options = {{{:chart_options}}};
+        var {{:chart_id}}_chart = new google.visualization.{{:chart_type}}(document.getElementById('{{:chart_id}}'));
+        {{:chart_id}}_chart.draw({{:chart_id}}_data,  {{:chart_id}}_options);
+        {{/:charts}}
+      }
+      {{{:chart_xtra}}}
+    </script>
+  </head>
+  <body>
+    {{#:charts}}<div id="{{:chart_id}}" style="width: {{:width}}px; height: {{:height}}px;"></div>{{/:charts}}
+    </body>
+</html>

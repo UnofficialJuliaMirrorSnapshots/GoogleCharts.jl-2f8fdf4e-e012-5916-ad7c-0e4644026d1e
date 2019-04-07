@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <script type="text/javascript" src='http://javascript-surface-plot.googlecode.com/svn/trunk/javascript/SurfacePlot.js'></script>
+    <script type="text/javascript" src='http://javascript-surface-plot.googlecode.com/svn/trunk/javascript/ColourGradient.js'></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+    <title>{{{:title}}}</title>
+        
+  </head>
+  <body>
+        
+    <script type='text/javascript'>
+            
+      google.load("visualization", "1");
+      google.setOnLoadCallback(setUp);
+            
+        function setUp()
+        {
+{{{:surfaceplot}}}
+      }
+            
+      </script>
+        
+      <div id='surfacePlotDiv_{{:chart_id}}' style="width:500px; height:500px;">
+        <!-- SurfacePlot goes here... -->
+            
+      </div>
+        
+    </body>
+</html>
+        
